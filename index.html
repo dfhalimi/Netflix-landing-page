@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Netflix Germany - Watch TV Shows Online, Watch Movies Online</title>
+</head>
+<body>
+    <header>
+        <div class="background-filter">
+            <div class="nav-bar">
+                <img class="header-logo" src="Images/netflix-logo.png" alt="Netflix Logo">
+                <div class="nav-btns">
+                    <div class="btn-container">
+                        <button id="language-btn"><i class="fas fa-globe"></i> <span id="language-setting">English</span> &nbsp;<i class="fas fa-caret-down"></i></button>
+                        <ul class="btn-dropdown" id="dropdown">
+                            <li class="dropdown-element">Deutsch</li>
+                            <li class="dropdown-element">English</li>
+                        </ul>
+                    </div>
+                    <button class="btn-red">Sign In</button>
+                </div>
+            </div>
+            <div class="get-started-section">
+                <div class="input-field-section">
+                    <h1>Unlimited movies, TV shows, and more.</h1>
+                    <p>Watch anywhere. Cancel anytime.</p>
+                    <span>Ready to watch? Enter your email to create or restart your membership.</span>
+                    <form class="submit-form" action="#">
+                        <label class="submit-label" for="emailAdress">Email address</label>
+                        <input class="submit-input" type="email" id="emailAdress" required>
+                        <button class="btn-red submit-btn" type="submit">Get Started &nbsp;<i class="fas fa-chevron-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="content content-1">
+                <div class="description">
+                    <h2>Enjoy on your TV.</h2>
+                    <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div class="image-container image-container-1">
+                    <img src="Images/tv.png" alt="TV">
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content content-2">
+                <div class="image-container image-container-2">
+                    <img src="Images/mobile.jpg" alt="mobile">
+                    <div class="download-card">
+                        <img src="Images/download-img.png" alt="Boxshot">
+                        <p>Stranger Things<br>
+                        <span>Downloading...</span></p>
+                        <i class="fas fa-download"></i>
+                    </div>
+                </div>
+                <div class="description description-2">
+                    <h2>Download your shows to watch offline.</h2>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content content-3">
+                <div class="description">
+                    <h2>Watch everywhere.</h2>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</p>
+                </div>
+                <div class="image-container image-container-3">
+                    <img src="Images/device-pile.png" alt="TV">
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content q-a-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="q-a-div" id="question1" onclick="displayDropdown(this.id)">
+                    <p>What can I watch on Netflix?</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="q-a-div dropdown-text" id="question1-dropdown-text">
+                    <p>Netflix has an extensive library of feature films, 
+                        documentaries, TV shows, anime, award-winning Netflix originals, 
+                        and more. Watch as much as you want, anytime you want.</p>
+                    <p><a href="#">Check out some of our content.</a></p>
+                </div>
+                <div class="q-a-div" id="question2" onclick="displayDropdown(this.id)">
+                    <p>What is Netflix?</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="q-a-div dropdown-text" id="question2-dropdown-text">
+                    <p>Netflix is a streaming service that offers a wide variety of 
+                        award-winning TV shows, movies, anime, documentaries, 
+                        and more on thousands of internet-connected devices.</p>
+                        <br>
+                        <br>
+                    <p>You can watch as much as you want, whenever you want 
+                        without a single commercial – all for one low monthly price. 
+                        There's always something new to discover and new TV shows and 
+                        movies are added every week!</p>
+                </div>
+                <div class="q-a-div" id="question3" onclick="displayDropdown(this.id)">
+                    <p>How much does Netflix cost?</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="q-a-div dropdown-text" id="question3-dropdown-text">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, 
+                        or streaming device, all for one fixed monthly fee. 
+                        Plans range from €7,99 to €17,99 a month. No extra costs, no contracts.</p>
+                </div>
+                <div class="q-a-div" id="question4" onclick="displayDropdown(this.id)">
+                    <p>Where can I watch?</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="q-a-div dropdown-text" id="question4-dropdown-text">
+                    <p>Watch anywhere, anytime, on an unlimited number of devices. 
+                        Sign in with your Netflix account to watch instantly on the web at netflix.com 
+                        from your personal computer or on any internet-connected device that offers the Netflix app, 
+                        including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                        <br>
+                        <br>
+                    <p>You can also download your favorite shows with the iOS, Android, or Windows 10 app. 
+                        Use downloads to watch while you're on the go and without an internet connection. 
+                        Take Netflix with you anywhere.</p>
+                </div>
+                <div class="q-a-div" id="question5" onclick="displayDropdown(this.id)">
+                    <p>How do I cancel?</p>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="q-a-div dropdown-text" id="question5-dropdown-text">
+                    <p>Netflix is flexible. There are no pesky contracts and no commitments. 
+                        You can easily cancel your account online in two clicks. 
+                        There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+                <div style="margin-top: 60px;" class="input-field-section">
+                    <span>Ready to watch? Enter your email to create or restart your membership.</span>
+                    <form class="submit-form" action="#">
+                        <label class="submit-label" for="emailAdress">Email address</label>
+                        <input class="submit-input" type="email" id="emailAdress" required>
+                        <button class="btn-red submit-btn" type="submit">Get Started &nbsp;<i class="fas fa-chevron-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="content-container">
+            <div class="content footer-content">
+                <p>Questions? Call <a href="#">0800-000-9677</a></p>
+                <div class="footer-links">
+                    <a href="#">FAQ</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Account</a>
+                    <a href="#">Media Center</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Redeem Gift Cards</a>
+                    <a href="#">Buy Gift Cards</a>
+                    <a href="#">Ways to Watch</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookie Preferences</a>
+                    <a href="#">Impressum</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Speed Test</a>
+                    <a href="#">Legal Notices</a>
+                    <a href="#">Netflix Originals</a>
+                </div>
+                <div class="btn-container">
+                    <button id="language-btn-2"><i class="fas fa-globe"></i> <span id="language-setting">English</span> &nbsp;<i class="fas fa-caret-down"></i></button>
+                    <ul class="btn-dropdown btn-dropdown-2">
+                        <li class="dropdown-element">Deutsch</li>
+                        <li class="dropdown-element">English</li>
+                    </ul>
+                </div>
+                <p>Netflix Germany</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Javascript -->
+<script src="js/script.js"></script>
+
+</html>
